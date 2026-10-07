@@ -25,7 +25,9 @@ SRC = ft_atoi.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
 	  ft_tolower.c \
-	  ft_toupper.c
+	  ft_toupper.c \
+	  ft_substr.c \
+	  ft_strjoin.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 18:45:42 by mavautie          #+#    #+#             */
-/*   Updated: 2026/10/07 15:30:14 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/07 16:15:16 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ char 	*ft_strrchr(const char *s, int c);
 char 	*ft_strstr(const char *haystack, const char *needle ,size_t n);
 int 	ft_tolower(int c);
 int 	ft_toupper(int c);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_strlen(const char *str);
 
 #endif
