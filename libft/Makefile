@@ -1,7 +1,9 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
+AR = ar rcs 
+RM = rm -f
 
 SRC = ft_atoi.c \
       ft_bzero.c \
@@ -27,23 +29,26 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_substr.c \
-	  ft_strjoin.c
+	  ft_strjoin.c \
+	  ft_split.c \
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o)
+
+HEADER = includes/libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-srcs/%.o: srcs/%.c includes/rush02.h
-	$(CC) $(CFLAGS) -I $(INC) -c $< -o $@
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -I includes -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 

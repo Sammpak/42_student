@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:16:53 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:04:39 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/08 14:02:23 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t ft_strlcpy(char *  dest , const char *  src , size_t  size )
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	j = 0;
 	i = 0;
@@ -29,6 +29,8 @@ size_t ft_strlcpy(char *  dest , const char *  src , size_t  size )
 		
 	while(src[j])
 	{
+		if(size < j)
+			break;
 		dest[i] = src[j];
 		i++;
 		j++;
@@ -51,7 +53,7 @@ size_t ft_strlcpy(char *  dest , const char *  src , size_t  size )
 // 	result = ft_strlcpy(str, "world", 30);
 // 	printf("\n Testing with (Hello ) + (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str, result);
 
-// 	result = ft_strlcpy(str_2, "world", 12);
+// 	result = ft_strlcpy(str_2, "world", 2);
 // 	printf("\n Testing with (Hello ) + (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str_2, result);
 
 // 	result = ft_strlcpy(str_3, "a", 9);

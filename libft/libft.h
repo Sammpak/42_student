@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 18:45:42 by mavautie          #+#    #+#             */
-/*   Updated: 2026/10/07 16:15:16 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/08 14:17:26 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char 	*ft_strchr(const char *s, int c);
 char 	*ft_strdup(const char *s);
 size_t	strlcat(char *dst, const char *src, size_t dstsize);
 size_t 	ft_strlcpy(char *  dest , const char *  src , size_t  size );
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int 	ft_strncmp(const char *s1, const char *s2, size_t n);
 char 	*ft_strrchr(const char *s, int c);
 char 	*ft_strstr(const char *haystack, const char *needle ,size_t n);
@@ -42,5 +42,8 @@ int 	ft_tolower(int c);
 int 	ft_toupper(int c);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_strlen(const char *str);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+
 
 #endif

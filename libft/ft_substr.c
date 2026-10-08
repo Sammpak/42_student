@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:32:44 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 16:20:42 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/08 11:57:54 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *substr;
-	int i;
+	size_t i;
 
 	i = 0;
 	substr = malloc(sizeof(char) * len);
@@ -43,31 +43,31 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return substr;
 }
 
-int main()
-{
-	char *s;
-	int from;
-	int during;
+// int main()
+// {
+// 	char *s;
+// 	int from;
+// 	int during;
 	 
-	s = "Geekssss";
-	from = 3;
-	during = 2;
-	char *result = ft_substr(s, from, during);
-	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (eks)", s, from, during, result);
+// 	s = "Geekssss";
+// 	from = 3;
+// 	during = 2;
+// 	char *result = ft_substr(s, from, during);
+// 	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (eks)", s, from, during, result);
 	
-	free(result);
+// 	free(result);
 	
-	s = "Hello world";
-	from = 0;
-	during = 100;
-	result = ft_substr(s, from, during);
-	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (Hello world)", s, from, during, result);
+// 	s = "Hello world";
+// 	from = 0;
+// 	during = 100;
+// 	result = ft_substr(s, from, during);
+// 	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (Hello world)", s, from, during, result);
 
-	free(result);
+// 	free(result);
 	
-	s = "Samuel";
-	from = 3;
-	during = 1;
-	result = ft_substr(s, from, during);
-	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (u)", s, from, during, result);
-}
+// 	s = "Samuel";
+// 	from = 3;
+// 	during = 1;
+// 	result = ft_substr(s, from, during);
+// 	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) : Expected (u)", s, from, during, result);
+// }
