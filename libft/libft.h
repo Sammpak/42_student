@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 18:45:42 by mavautie          #+#    #+#             */
-/*   Updated: 2026/10/09 16:53:19 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:49:13 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:34:52 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 16:39:23 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:52:42 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,12 @@ int	count_word(char const *s, char c)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+void	split_custom(char **result, char c, char const *s)
 {
-	char	**result;
-	int		nbrwrd;
-	int		from;
-	int		i;
-	int		index;
+	int	i;
+	int	index;
+	int	from;
 
-	if (ft_strlen(s) == 0)
-		return (NULL);
-	nbrwrd = count_word(s, c);
-	result = malloc(sizeof(char) * nbrwrd + 1);
-	if (result == NULL)
-		return (NULL);
-	printf("\n nbr word %d", nbrwrd);
-	from = 0;
 	i = 0;
 	index = 0;
 	while (s[i])
@@ -59,8 +49,8 @@ char	**ft_split(char const *s, char c)
 			while (s[i] != c && s[i])
 				i++;
 			result[index] = malloc(sizeof(char) * i - from + 1);
-			if (result == NULL)
-				return (NULL);
+			if (result[index] == NULL)
+				return ;
 			ft_strlcpy(result[index], &s[from], i - from - 1);
 			index++;
 		}
@@ -68,6 +58,20 @@ char	**ft_split(char const *s, char c)
 			i++;
 	}
 	result[index] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		nbrwrd;
+
+	if (ft_strlen(s) == 0)
+		return (NULL);
+	nbrwrd = count_word(s, c);
+	result = malloc(sizeof(char) * nbrwrd + 1);
+	if (result == NULL)
+		return (NULL);
+	split_custom(result, c, s);
 	return (result);
 }
 
@@ -79,9 +83,8 @@ char	**ft_split(char const *s, char c)
 // 	s = "--hello--world-SHENDI-";
 // 	c = '-';
 // 	char **result = ft_split(s,c);
-// 	printf("\n Str (%s) will remove all the (%c) at the beginning and the end : 
-//Expected ([hello][world][SHENDI])",
-//		s, c);
+// 	printf("\n Str (%s) without (%c) Expected ([hello][world][SHENDI])",
+// 		s, c);
 
 // 	if (result)
 // 	{

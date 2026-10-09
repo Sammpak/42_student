@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:18:51 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 16:25:45 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:41:13 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,25 @@ int	get_int_size(long nbr)
 	return (i);
 }
 
+int	is_neg(int n)
+{
+	if (n < 0)
+		return (1);
+	return (0);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*s;
 	int		size;
-	int		is_neg;
 	long	nbr;
 
 	size = 0;
-	is_neg = 0;
 	nbr = n;
 	if (n == 0)
 		return ("0");
 	if (nbr < 0)
 	{
-		is_neg = 1;
 		size++;
 		nbr = nbr * -1;
 	}
@@ -52,25 +56,25 @@ char	*ft_itoa(int n)
 		nbr = nbr / 10;
 		size--;
 	}
-	s[size] = (nbr % 10) + '0';
-	if (is_neg)
+	if (is_neg(n) == 1)
 		s[0] = '-';
 	return (s);
 }
+// #include <stdio.h>
 
-// int main()
+// int	main(void)
 // {
 // 	int nbr;
 // 	char *result;
 // 	char *result_2;
 
-// 	nbr = -143;
+// 	nbr = 143;
 // 	result = ft_itoa(nbr);
-// 	printf("\n nbr (%d) is now (%s) as a string : Expected (-143)", nbr,
-//		result);
+// 	printf("\n nbr (%d) is now (%s) as a string : Expected (143)", nbr,
+// 		result);
 
 // 	nbr = -2147483648;
 // 	result_2 = ft_itoa(nbr);
 // 	printf("\n nbr (%d) is now (%s) as a string : Expected (-2147483648)", nbr,
-//		result_2);
+// 		result_2);
 // }

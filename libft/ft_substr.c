@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:32:44 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 16:52:05 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:53:30 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	from = 3;
 // 	during = 2;
 // 	char *result = ft_substr(s, from, during);
-// 	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) :
-//Expected (eks)",
+// 	printf("\n Sub (%s) from (%d) during (%d) : (%s):Expected (eks)",
 //		s, from, during, result);
 
 // 	free(result);
@@ -59,8 +58,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	from = 0;
 // 	during = 100;
 // 	result = ft_substr(s, from, during);
-// 	printf("\n Sub (%s) from (%d) during (%d) : Result (%s) :
-//Expected (Hello world)",
+// 	printf("\n Sub (%s) from (%d) during (%d) : (%s) Expected (Hello world)",
 //		s, from, during, result);
 
 // 	free(result);

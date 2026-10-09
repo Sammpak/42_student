@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 16:16:55 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 16:48:15 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:54:29 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	s = "xxyyHELLOZzZxxzz";s
 // 	set = "xyz";
 // 	char *result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
-//Result (%s) : Expected (HELLO)",
+// 	printf("\n Str (%s) without (%s): Result (%s) : Expected (HELLO)",
 //		s,set, result);
 
 // 	free(result);
@@ -50,8 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	s = NULL;
 // 	set = "xyz";
 // 	result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
-//Result (%s) : Expected ((null))",
+// 	printf("\n Str (%s) without the (%s) : Result (%s) : Expected ((null))",
 //		s,set, result);
 
 // 	free(result);
