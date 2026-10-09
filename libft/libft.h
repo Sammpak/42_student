@@ -6,16 +6,23 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 18:45:42 by mavautie          #+#    #+#             */
-/*   Updated: 2026/10/08 16:44:20 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 11:03:01 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADERS_H
 # define HEADERS_H
 
-# include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
