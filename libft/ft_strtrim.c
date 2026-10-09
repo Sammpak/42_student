@@ -6,33 +6,31 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 16:16:55 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/08 14:17:39 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:48:15 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int index_start;
-	int index_end;
-	int len;
-	char *temp;
+	int		index_start;
+	int		index_end;
+	int		len;
+	char	*temp;
+	char	*result;
 
-	if(s1 == NULL || set == NULL)
-		return NULL;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	index_start = 0;
 	len = ft_strlen(s1);
-
-	while(s1[index_start] && ft_strchr(set,s1[index_start]))
-			index_start++;
-
+	while (s1[index_start] && ft_strchr(set, s1[index_start]))
+		index_start++;
 	index_end = len - 1;
-	while(index_end > index_start && ft_strchr(set,s1[index_end]))
+	while (index_end > index_start && ft_strchr(set, s1[index_end]))
 		index_end--;
-
-	char *result = ft_substr(s1, index_start, index_end - index_start + 1);
-	return result;
+	result = ft_substr(s1, index_start, index_end - index_start + 1);
+	return (result);
 }
 
 // int main()
@@ -43,35 +41,45 @@ char *ft_strtrim(char const *s1, char const *set)
 // 	s = "xxyyHELLOZzZxxzz";s
 // 	set = "xyz";
 // 	char *result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end : Result (%s) : Expected (HELLO)", s,set, result);
-	
+// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
+//Result (%s) : Expected (HELLO)",
+//		s,set, result);
+
 // 	free(result);
 
 // 	s = NULL;
 // 	set = "xyz";
 // 	result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end : Result (%s) : Expected ((null))", s,set, result);
-	
+// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
+//Result (%s) : Expected ((null))",
+//		s,set, result);
+
 // 	free(result);
 
 // 	s = "123";
 // 	set = NULL;
 // 	result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end : Result (%s) : Expected ((null))", s,set, result);
-	
+// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
+//Result (%s) : Expected ((null))",
+//		s,set, result);
+
 // 	free(result);
 
 // 	s = "BMW";
 // 	set = "";
 // 	result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end : Result (%s) : Expected (BMW)", s,set, result);
-	
+// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
+//Result (%s) : Expected (BMW)",
+//		s,set, result);
+
 // 	free(result);
 
 // 	s = "";
 // 	set = "RX7";
 // 	result = ft_strtrim(s,set);
-// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end : Result (%s) : Expected ()", s,set, result);
-	
+// 	printf("\n Str (%s) will remove all the (%s) at the beginning and the end :
+//Result (%s) : Expected ()",
+//		s,set, result);
+
 // 	free(result);
 // }

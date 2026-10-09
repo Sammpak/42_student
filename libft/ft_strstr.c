@@ -6,33 +6,30 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 12:49:20 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:16:02 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:47:25 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char *ft_strstr(const char *haystack, const char *needle ,size_t n)
+char	*ft_strstr(const char *haystack, const char *needle, size_t n)
 {
-	size_t i;
-	size_t j;
-	
+	size_t	i;
+	size_t	j;
+
 	i = 0;
 	j = 0;
-	
-	while(haystack[i])
+	while (haystack[i])
 	{
-		if(i > n)
-			return 0;
-		if(haystack[i] == needle[j])
+		if (i > n)
+			return (0);
+		if (haystack[i] == needle[j])
 		{
-			while(needle[j])
+			while (needle[j])
 			{
-				if(needle[j] == haystack[i])
-				{
-					if(!needle[j + 1])
-						return (char *) haystack + i - j;
-				}
+				if (needle[j] == haystack[i])
+					if (!needle[j + 1])
+						return ((char *)haystack + i - j);
 				j++;
 				i++;
 			}
@@ -41,7 +38,7 @@ char *ft_strstr(const char *haystack, const char *needle ,size_t n)
 		}
 		i++;
 	}
-	return 0;
+	return (0);
 }
 
 // #include <stdio.h>
@@ -53,14 +50,17 @@ char *ft_strstr(const char *haystack, const char *needle ,size_t n)
 // 	char	needle[] = "ain";
 // 	char *result;
 // 	int n = 10;
-// 	printf("\n str (%s) needle (%s) n(%d) : Expected (ain in Spain falls mainly on the plains)", str, needle, n);
+// 	printf("\n str (%s) needle (%s) n(%d) : 
+//Expected (ain in Spain falls mainly on the plains)",
+//		str, needle, n);
 // 	result = ft_strstr(str, needle, n);
 // 	printf(" result : %s", result);
 
 // 	n = 4;
-// 	printf("\n str (%s) needle (%s) n(%d) : Expected ((null))", str, needle, n);
+// 	printf("\n str (%s) needle (%s) n(%d) : 
+//Expected ((null))", str, needle, n);
 // 	result = ft_strstr(str, needle, n);
 // 	printf(" result : %s", result);
-	
+
 // 	return (0);
 // }

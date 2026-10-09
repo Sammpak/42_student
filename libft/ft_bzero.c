@@ -6,14 +6,13 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 13:04:27 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:03:47 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:27:26 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <stdlib.h>
-
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp_ptr;
 	size_t			pose;
@@ -27,14 +26,13 @@ void ft_bzero(void *s, size_t n)
 	}
 }
 
-
 // #include <stdio.h>
 
 // int	main(void)
 // {
 // 	char	str[] = "hello world";
 
-// 	int nbr = 4;	
+// 	int nbr = 4;
 // 	printf("\n PTR (%s) nbr (%d) : Expected (0000o world)", str, nbr);
 // 	ft_bzero(str, nbr);
 
@@ -47,7 +45,7 @@ void ft_bzero(void *s, size_t n)
 // 	}
 
 // 	char	str_2[] = "0123456789";
-// 	nbr = 7;	
+// 	nbr = 7;
 // 	printf("\n PTR (%s) nbr (%d) : Expected (0000000789)", str_2, nbr);
 // 	ft_bzero(str_2, nbr);
 
@@ -60,7 +58,7 @@ void ft_bzero(void *s, size_t n)
 // 	}
 
 // 	char	str_3[15] = "hello";
-// 	nbr = 15;	
+// 	nbr = 15;
 // 	printf("\n PTR (%s) nbr (%d) : Expected (000000000000000)", str_3, nbr);
 // 	ft_bzero(str_3, nbr);
 
@@ -71,7 +69,7 @@ void ft_bzero(void *s, size_t n)
 // 		printf("%d ", (unsigned char)str_3[i]);
 // 		i++;
 // 	}
-	
+
 // 	printf("\n");
 // 	return (0);
 // }

@@ -6,19 +6,19 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 14:18:38 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 15:35:56 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:28:02 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	(*del)(lst->content);
 	free(lst);
 }
 
-void test(void* lst)
+void	test(void *lst)
 {
 	lst = NULL;
 }

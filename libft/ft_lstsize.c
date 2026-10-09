@@ -6,24 +6,25 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 12:39:45 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 13:36:31 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:30:06 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-	int i;
-	t_list *temp;
+	int		i;
+	t_list	*temp;
+
 	temp = lst;
 	i = 0;
-	while(temp != NULL)
+	while (temp != NULL)
 	{
 		temp = temp->next;
 		i++;
 	}
-	return i;
+	return (i);
 }
 
 // int main()
@@ -31,14 +32,14 @@ unsigned int ft_lstsize(t_list *lst)
 // 	char *str = "Hello";
 // 	char *str2 = "World";
 // 	char *str3 = "encore";
-	
+
 // 	t_list *firs_list = ft_lstnew(str);
 // 	t_list *second_list = ft_lstnew(str2);
 // 	t_list *third_list = ft_lstnew(str3);
 
 // 	unsigned int len = ft_lstsize(firs_list);
 // 	printf("[0] nbr of node is : %d \n", len);
-	
+
 // 	firs_list->next = second_list;
 
 // 	len = ft_lstsize(firs_list);
@@ -48,5 +49,5 @@ unsigned int ft_lstsize(t_list *lst)
 
 // 	len = ft_lstsize(firs_list);
 // 	printf("[2] nbr of node is : %d \n", len);
-	
+
 // }

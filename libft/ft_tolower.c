@@ -6,19 +6,15 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 10:31:36 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/08 15:22:19 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:49:31 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if(c >= 65 && c <= 90)
-	{
-		return c + 32;
-	}
-	
-	return c;
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
 
 // #include <stdio.h>

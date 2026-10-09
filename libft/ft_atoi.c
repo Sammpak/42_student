@@ -6,26 +6,24 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 13:16:29 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:22:34 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:27:30 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	long	res;
-	int sign;
-	
+	int		sign;
+
 	res = 0;
 	sign = 1;
-	if(!(*nptr == '-' || *nptr == '+') && (*nptr < 48 && *nptr > 57))
-		return 0;
-		
-	if(*nptr == '-' || *nptr == '+')
+	if (!(*nptr == '-' || *nptr == '+') && (*nptr < 48 && *nptr > 57))
+		return (0);
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if(*nptr == '-')
+		if (*nptr == '-')
 			res = -1;
 	}
-
 	while (*nptr >= '0' && *nptr <= '9')
 	{
 		res = res * 10 + *nptr - '0';
@@ -48,13 +46,14 @@ int ft_atoi(const char *nptr)
 // 	result = ft_atoi(s);
 // 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (0)", s, result);
 
-
 // 	result = ft_atoi(s2);
 // 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (1)", s2, result);
 
 // 	result = ft_atoi(s3);
-// 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (-1)", s3, result);
+// 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (-1)", s3,
+//		result);
 
 // 	result = ft_atoi(s4);
-// 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (2147483647)", s4, result);
+// 	printf("\n Atoi with (%s) : Result in int (%d) : Expected (2147483647)", s4,
+//		result);
 // }

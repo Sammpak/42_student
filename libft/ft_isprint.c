@@ -6,23 +6,24 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 09:30:15 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:04:05 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:24:31 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int str)
+int	ft_isprint(int str)
 {
-	int result = 0;
+	int	result;
 
+	result = 0;
 	if (str >= 32 && str <= 126)
 		result = 1;
-	return result;
+	return (result);
 }
 
 // #include <stdio.h>
 // int main()
 // {
-	
+
 // 	char c = 'a';
 // 	int result = ft_isprint(c);
 // 	printf("\n Testing with (%c) : Result (%d) : Expected (1)", c, result);

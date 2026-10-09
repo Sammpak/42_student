@@ -6,13 +6,13 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 12:20:32 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/09 13:23:05 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:27:38 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
@@ -29,7 +29,8 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 
 // 	ft_lstadd_front(&first_str ,new_first_str);
 
-// 	printf(" After adding new first [%s] [%s] \n ", (char *) first_str->content, (char *) first_str->next->content);
+// 	printf(" After adding new first [%s] [%s] \n ", (char *) first_str->content,
+//		(char *) first_str->next->content);
 
 // 	return (0);
 // }

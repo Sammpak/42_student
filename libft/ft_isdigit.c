@@ -6,23 +6,24 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 09:30:15 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:04:03 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:24:12 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int str)
+int	ft_isdigit(int str)
 {
-	int result = 0;
+	int	result;
 
-	if(str >= 48 && str <= 57)
+	result = 0;
+	if (str >= 48 && str <= 57)
 		result = 1;
-	return result;
+	return (result);
 }
 
 // #include <stdio.h>
 // int main()
 // {
-	
+
 // 	char c = '0';
 // 	int result = ft_isdigit(c);
 // 	printf("\n Testing with (%c) : Result (%d) : Expected (1)", c, result);
@@ -46,5 +47,5 @@ int		ft_isdigit(int str)
 // 	c = ':';
 // 	result = ft_isdigit(c);
 // 	printf("\n Testing with (%c) : Result (%d) : Expected (0)", c, result);
-	
+
 // }

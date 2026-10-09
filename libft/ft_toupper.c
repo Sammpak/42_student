@@ -6,17 +6,15 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 10:23:09 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/08 15:21:16 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:49:58 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-	{
-		return c - 32;
-	}
-	return c;
+		return (c - 32);
+	return (c);
 }
 
 // #include <stdio.h>

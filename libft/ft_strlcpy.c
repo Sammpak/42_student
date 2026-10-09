@@ -6,38 +6,35 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:16:53 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/08 14:02:23 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:43:22 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t ft_strlcpy(char *  dest , const char *  src , size_t  size )
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	i = 0;
-
-	if(size == 0)
+	if (size == 0)
 	{
 		while (dest[i])
 			i++;
-		return i;
+		return (i);
 	}
-		
-	while(src[j])
+	while (src[j])
 	{
-		if(size < j)
-			break;
+		if (size < j)
+			break ;
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	
 	dest[i] = '\0';
-	return i;
+	return (i);
 }
 
 // #include <stdio.h>
@@ -51,13 +48,19 @@ size_t ft_strlcpy(char *  dest , const char *  src , size_t  size )
 // 	size_t	result;
 
 // 	result = ft_strlcpy(str, "world", 30);
-// 	printf("\n Testing with (Hello ) + (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str, result);
+// 	printf("\n Testing with (Hello )
+//		+ (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str,
+//		result);
 
 // 	result = ft_strlcpy(str_2, "world", 2);
-// 	printf("\n Testing with (Hello ) + (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str_2, result);
+// 	printf("\n Testing with (Hello )
+//		+ (world) : Result (%s) : Return (%zu) : Expected (world / 5)", str_2,
+//		result);
 
 // 	result = ft_strlcpy(str_3, "a", 9);
-// 	printf("\n Testing with (Hello ) + (a), size (9) : Result (%s) : Return (%zu) : Expected (a / 11)", str_3, result);
+// 	printf("\n Testing with (Hello ) + (a),
+//		size (9) : Result (%s) : Return (%zu) : Expected (a / 11)", str_3,
+//		result);
 
 // 	return (0);
 // }

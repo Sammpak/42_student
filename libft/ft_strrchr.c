@@ -6,7 +6,7 @@
 /*   By: spaccaud <spaccaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 12:40:09 by spaccaud          #+#    #+#             */
-/*   Updated: 2026/10/07 15:04:47 by spaccaud         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:46:22 by spaccaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	char *temps_char;
+	int		i;
+	char	*temps_char;
+
 	i = 0;
-	
-	while(*s)
+	while (*s)
 	{
-		if(*s == c)
+		if (*s == c)
 		{
-			temps_char = (char *) s;
+			temps_char = (char *)s;
 			i++;
-		}		
+		}
 		s++;
 	}
-	
-	if(i > 0)
-		return temps_char;
-	return NULL;
+	if (i > 0)
+		return (temps_char);
+	return (NULL);
 }
 
 // #include <stdio.h>
@@ -59,17 +58,20 @@ char *ft_strrchr(const char *s, int c)
 
 // 	c = 'm';
 // 	result = ft_strrchr(s, c);
-// 	printf("\n Testing with (%c) : Result (%s) : Expected (monde, je suis Samuel !)", c, result);
+// 	printf("\n Testing with (%c) : Result (%s) : Expected (monde,
+//		je suis Samuel !)", c, result);
 
 // 	c = 'S';
 // 	result = ft_strrchr(s, c);
-// 	printf("\n Testing with (%c) : Result (%s) : Expected (Samuel !)", c, result);
+// 	printf("\n Testing with (%c) : Result (%s) : Expected (Samuel !)", c,
+//		result);
 
 // 	c = 's';
 // 	result = ft_strrchr(s2, c);
-// 	printf("\n Testing with (%c) : Result (%s) : Expected (suis Samuel !)", c, result);
+// 	printf("\n Testing with (%c) : Result (%s) : Expected (suis Samuel !)", c,
+//		result);
 
 // 	c = 'z';
 // 	result = ft_strrchr(s3, c);
-// 	printf("\n Testing with (%c) : Result (%s) : Expected ((null))", c, result);	
+// 	printf("\n Testing with (%c) : Result (%s) : Expected ((null))", c, result);
 // }
