@@ -32,8 +32,13 @@ SRC = ft_atoi.c \
 	  ft_strjoin.c \
 	  ft_split.c \
 	  ft_itoa.c \
-	  ft_strmapi.c
-
+	  ft_strmapi.c \
+	  ft_lstnew.c \
+	  ft_lstsize.c \
+	  ft_lstlast.c \
+	  ft_lstdelone.c \
+	  ft_lstadd_back.c \
+	  ft_lstclear.c 
 
 OBJS = $(SRC:.c=.o)
 
